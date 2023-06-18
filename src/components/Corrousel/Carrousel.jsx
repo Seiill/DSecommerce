@@ -19,7 +19,7 @@ const Carousel = () => {
         <Arrow direction="left" onClick={()=>handleClick("left")}>
             <FaArrowLeft/>
         </Arrow>
-        <Wrapper slideIndex= {slideIndex}>
+        <Wrapper slideindex= {slideIndex}>
           {slides.map((item)=>(
             
             <Slide bg ={item.bg} key={item.id}>

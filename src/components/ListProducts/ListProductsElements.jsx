@@ -1,6 +1,6 @@
 import { styled } from "styled-components"
+import {Link } from "react-router-dom"
 export const Container = styled.section`
-
 max-width: 80%;
 display: flex;
 flex-direction: column;
@@ -60,9 +60,10 @@ margin: 0 12px;
 }
 `
 
-export const ContentProduct = styled.div`
+export const ContentProduct = styled(Link)`
     max-width: 251px;
     min-width: 251px;
     height: 400px;
+    cursor: pointer;
 }
 `

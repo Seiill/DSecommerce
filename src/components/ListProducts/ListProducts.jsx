@@ -1,13 +1,13 @@
 import React from 'react'
-import { listProduct } from './dataProducts'
-import { Container, GalleryProduct, ContentImage, Image, TextContent, ProductName, ProductPrice, ContentProduct } from './LIstProductsElements'
+import { listProduct } from '../../util/data'
+import { Container, GalleryProduct, ContentImage, Image, TextContent, ProductName, ProductPrice, ContentProduct } from './ListProductsElements'
 
 const ListProducts = ({cate}) => {
   return (
     <Container>
     <GalleryProduct>
         {listProduct.filter((item) => item.category === cate).map((item) => (
-            <ContentProduct key={item.id}>
+            <ContentProduct to={`/producto/${item.id}`}  key={item.id}> 
                 <ContentImage>
                     <Image src={item.img} />
                 </ContentImage>

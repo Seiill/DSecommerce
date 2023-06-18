@@ -76,7 +76,7 @@ margin-right: -22px;
 export const NavIten= styled.li`
 height: 80px;
 `;
-export const NavLinks = styled(LinkS)`
+export const NavLinks = styled(LinkR)`
 color: #4F518C;
 font-weight: 600;
 display: flex;
@@ -100,7 +100,7 @@ align-items: center;
 `;
 export const NavBtnLink= styled(LinkR)`
 border-radius: 50px;
-background: #EC6C3D;
+background: #4F518C;
 white-space: nowrap;
 padding: 10px 22px;
 color: #010606;
@@ -114,6 +114,6 @@ text-decoration: none;
 &:hover{
     transition: all 0.2s ease-in-out;
     background: #fff;
-    color: #010606;
+    color: #2C2A4A;
 }
 `;

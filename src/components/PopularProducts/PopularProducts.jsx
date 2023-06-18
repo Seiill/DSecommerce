@@ -1,6 +1,6 @@
 import React from 'react';
 import One from '../../images/CatalogoDS-24.jpg'
-import { listProduct } from '../ListProducts/dataProducts';
+import { listProduct } from '../../util/data';
 import { Container, Title, StarProduct,ContentImage, Image, TextContent, Name, ProductPrice, Categories, ListCategories, Li } from './popularProductsElements';
 const PopularProducts = () => {
     const popularProducts = listProduct
@@ -8,7 +8,7 @@ const PopularProducts = () => {
   return (
     <Container>
         <Title>Más Populares</Title>
-        {popularProducts.map((item)=>(
+        {listProduct.map((item)=>(
             <ContentImage key={item.id}>
             <Image src={item.img}/>
             <TextContent>

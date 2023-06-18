@@ -1,9 +1,9 @@
 import React from "react";
-import { products } from "./data";
+import { listProduct } from "../../util/data";
 import { ProductContainer, ProductItem,ProductItemImage, TextInfo, Title, Description, AddCart, ImgContent, Descuento } from "./offerElemens";
 
 const Offers = () => {
-  const filteredProducts = products.filter((product) => product.offer);
+  const filteredProducts = listProduct.filter((listProduct) => listProduct.offer);
 
   return (
     <ProductContainer>

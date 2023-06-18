@@ -2,17 +2,17 @@ export const navItems = [
     {
         id:'1',
         title:'Desayunos',
-        path: 'Desayunos'
+        path: "/desayunos"
     },
     {
         id:'2',
         title:'Detalles',
-        path: 'Detalles'
+        path: "/detalles"
     },
     {
         id:'3',
         title:'Nosotros',
-        path: 'Nosotros'
+        path: "/nosotros"
     }
     
     

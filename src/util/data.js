@@ -1,15 +1,15 @@
-import i1 from '../../images/CatalogoDS-12.jpg'
-import i2 from '../../images/CatalogoDS-13.jpg'
-import i3 from '../../images/CatalogoDS-14.jpg'
-import i4 from '../../images/CatalogoDS-15.jpg'
-import i5 from '../../images/CatalogoDS-16.jpg'
-import i6 from '../../images/CatalogoDS-17.jpg'
-import i7 from '../../images/CatalogoDS-18.jpg'
-import i8 from '../../images/CatalogoDS-19.jpg'
-import i9 from '../../images/CatalogoDS-20.jpg'
-import i10 from '../../images/CatalogoDS-21.jpg'
-import i11 from '../../images/CatalogoDS-22.jpg'
-import i12 from '../../images/CatalogoDS-23.jpg'
+import i1 from '../images/CatalogoDS-13.jpg'
+import i2 from '../images/CatalogoDS-13.jpg'
+import i3 from '../images/CatalogoDS-14.jpg'
+import i4 from '../images/CatalogoDS-15.jpg'
+import i5 from '../images/CatalogoDS-16.jpg'
+import i6 from '../images/CatalogoDS-17.jpg'
+import i7 from '../images/CatalogoDS-18.jpg'
+import i8 from '../images/CatalogoDS-19.jpg'
+import i9 from '../images/CatalogoDS-20.jpg'
+import i10 from '../images/CatalogoDS-21.jpg'
+import i11 from '../images/CatalogoDS-22.jpg'
+import i12 from '../images/CatalogoDS-23.jpg'
 export const listProduct=[
     {
         id:'0001',
@@ -21,6 +21,7 @@ export const listProduct=[
         category:'Desayunos',
         rating: 5,
         reviews: 10,
+        alt: 'mi nombre',
 
     },
     {
@@ -33,6 +34,7 @@ export const listProduct=[
         category:'Desayunos',
         rating: 5,
         reviews: 10,
+        alt: 'mi nombre',
 
     },
     {
@@ -57,19 +59,19 @@ export const listProduct=[
         category:'Desayunos',
         rating: 5,
         reviews: 10,
-
+        alt: 'mi nombre',
     },
     {
         id:'0005',
         name:'name1',
-        desc:'Este producto es espectacular',
+        desc:'Este producto es espectacular¡Delicioso desayuno para empezar el día con energía! Nuestro irresistible combo incluye una suculenta tortilla de huevos, crujientes tostadas de pan integral, y jugosas rodajas de fruta fresca. Disfruta de una experiencia matutina llena de sabor y nutrientes. ¡El desayuno perfecto para conquistar el día!',
         img: i5,
         price: 1000,
         offer: true,
         category:'Detalles',
         rating: 5,
         reviews: 10,
-
+        alt: 'mi nombre',
     },
     {
         id:'0006',
@@ -81,7 +83,7 @@ export const listProduct=[
         category:'Detalles',
         rating: 5,
         reviews: 10,
-
+        alt: 'mi nombre',
     },
     {
         id:'0007',
@@ -93,7 +95,7 @@ export const listProduct=[
         category:'Detalles',
         rating: 5,
         reviews: 10,
-
+        alt: 'mi nombre',
     },
     {
         id:'0008',
@@ -105,7 +107,7 @@ export const listProduct=[
         category:'Detalles',
         rating: 5,
         reviews: 10,
-
+        alt: 'mi nombre',
     },
     {
         id:'0009',
@@ -117,7 +119,7 @@ export const listProduct=[
         category:'Detalles',
         rating: 5,
         reviews: 10,
-
+        alt: 'mi nombre',
     },
     {
         id:'0010',
@@ -129,7 +131,7 @@ export const listProduct=[
         category:'Desayunos',
         rating: 5,
         reviews: 10,
-
+        alt: 'mi nombre',
     },
     {
         id:'0011',
@@ -141,7 +143,7 @@ export const listProduct=[
         category:'Desayunos',
         rating: 5,
         reviews: 10,
-
+        alt: 'mi nombre',
     },
     {
         id:'0012',
@@ -153,6 +155,6 @@ export const listProduct=[
         category:'Detalles',
         rating: 5,
         reviews: 10,
-
+        alt: 'mi nombre',
     }
 ]

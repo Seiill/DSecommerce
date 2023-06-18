@@ -1,16 +1,7 @@
-/* import React, { useState, useEffect } from 'react'; */
 import { HeroContainer, CarouselContainer, CarouselItem, ButtonContainer,Img, Button, } from './HeroElements';
 import { imagescarrousel } from './dataHero';
 import React, { useState, useEffect } from 'react';
 
-
-/* const images = [
-  'image1.jpg',
-  'image2.jpg',
-  'image3.jpg',
-  'image4.jpg'
-];
- */
 const HeroSection = () => {
 const [activeIndex, setActiveIndex] = useState(0);
 
@@ -32,8 +23,9 @@ const [activeIndex, setActiveIndex] = useState(0);
     <HeroContainer>
       <CarouselContainer>
          {imagescarrousel.map((item, index)=>(
-            <CarouselItem key ={item.id} active={index=== activeIndex}
-            onClick={()=> handleSlideChange()}>
+            <CarouselItem 
+            key ={item.id} active={index.toString()=== activeIndex.toString()}
+            onClick={()=> handleSlideChange(index)}>
             <Img src={item.image}></Img>
             
         </CarouselItem>  
@@ -44,7 +36,7 @@ const [activeIndex, setActiveIndex] = useState(0);
         {imagescarrousel.map((item, index) => (
           <Button
             key={item.id}
-            active={index === activeIndex}
+            active={index === activeIndex ? "true" : "false"}
             onClick={() => handleSlideChange(index)}
           ></Button>
         ))}

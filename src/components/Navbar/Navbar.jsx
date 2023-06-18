@@ -23,30 +23,34 @@ const Navbar = ({ toggle }) => {
     const toggleHome = () => {
         scroll.scrollToTop()
     }
+    /* const handleNavItemClick = (event, item) => {
+        const target = event.target;
+        console.log('Contenido de NavLinks:', target);
+        console.log('Contenido de NavLinks:', item.path);
+      }; */
 
   return (
     <>
-    <IconContext.Provider value={{color: '#2C2A4A3'}}/>
-        <Nav scrollNav={scrollNav}>
+    <IconContext.Provider value={{ color: '#2C2A4A3' }}>
+        <Nav scrollnav={scrollNav.toString()}>
             <NavbarContainer>
                 <NavLogo to='/' onClick={toggleHome} ><Img src={IconLogo}></Img></NavLogo>
                 <MobileIcon onClick={toggle}>
                     <FaBars/>
                 </MobileIcon>
                 <NavMenu>
-                    {navItems.map((item)=>{
-                        return(<NavIten key={item.id}>
-                            <NavLinks /* key={item.id} */ to={item.path} smooth="true" duration={500} spy={true} exact='true' >{item.title}</NavLinks> 
-                            </NavIten>)}
-                        )}                  
+                    {navItems.map((item)=>(
+                        <NavIten key={item.id}>
+                            <NavLinks key={item.id} to={item.path} smooth="true" duration={500} spy={true.toString()} exact="true" >{item.title}</NavLinks> 
+                            </NavIten>))}          
                 </NavMenu>
                 <NavBtn>
-                <NavBtnLink to ="/" smooth="true" duration={500} spy={true} exact="true" offset={-80}>Contact Us</NavBtnLink>
+                <NavBtnLink to ="/contact" smooth="true" duration={500} spy="true" exact="true" offset={-80}>Contácto</NavBtnLink>
                 </NavBtn>    
             </NavbarContainer>
             
         </Nav>
-        <IconContext.Provider/>
+        </IconContext.Provider>
         
     </>
   )

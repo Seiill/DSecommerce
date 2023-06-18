@@ -1,6 +1,6 @@
 import React from "react";
 
-import { listImages } from "./data";
+import { listProduct } from "../../util/data";
 import { GalleryContainer, ContentImage, Title, Image, TextInfo, Caption, Description, Container } from "./galleryElements";
 
 const breakpointColumnsObj = {
@@ -20,12 +20,12 @@ const Gallery = () => {
       className="my-masonry-grid"
       columnClassName="my-masonry-grid_column">
         
-        {listImages.map((image) => (
-          <ContentImage key={image.id}>
-            <Image src={image.src} alt={image.alt} />
+        {listProduct.map((item) => (
+          <ContentImage key={item.id}>
+            <Image src={item.img} alt={item.name} />
             <TextInfo>
-            <Caption>{image.caption}</Caption>
-            <Description>{image.desc}</Description>
+            <Caption>${item.price}</Caption>
+            <Description>{item.name}</Description>
             </TextInfo>
           </ContentImage>
         ))}

@@ -1,10 +1,9 @@
-import React from 'react'
-import Navbar from "../components/Navbar/navbar";
+import React from 'react';
 import HeroSection from '../components/HeroSection/Hero';
 import ListProducts from '../components/ListProducts/ListProducts';
 import PopularProducts from '../components/PopularProducts/PopularProducts';
 import { styled } from 'styled-components';
-import { Title, Description } from '../components/ListProducts/LIstProductsElements';
+import { Title, Description } from '../components/ListProducts/ListProductsElements';
 import Footer from '../components/Footer/Footer';
 
 const Container = styled.section`
@@ -26,6 +25,7 @@ margin: auto;
 `
 
 const Detalles = () => {
+
   return (
     <>
     <HeroSection/>

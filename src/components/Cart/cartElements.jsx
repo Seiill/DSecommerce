@@ -35,7 +35,7 @@ export const Product = styled.div`
 `
 export const Image = styled.img`
 width: 60px;
-height 70px;
+height: 70px;
 object-fit: cover;
 background-color: #4F518C;
 `
