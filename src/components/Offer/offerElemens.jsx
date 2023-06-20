@@ -46,7 +46,7 @@ color: #2C2A4A;
 font-weight: 600;
 padding-top: 0.5rem;
 `
-export const AddCart = styled.button`
+export const AddCart  = styled.button`
 margin: 0.3rem 1rem;
 font-size: 1.1rem;
 background-color: #DABFFF;
@@ -55,5 +55,6 @@ font-weight: 600;
 padding: 10px;
 border: none;
 border-radius: 5px;
+cursor: pointer;
 
 `

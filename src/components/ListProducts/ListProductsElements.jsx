@@ -1,5 +1,5 @@
 import { styled } from "styled-components"
-import {Link } from "react-router-dom"
+import {Link} from "react-router-dom"
 export const Container = styled.section`
 max-width: 80%;
 display: flex;
@@ -65,5 +65,6 @@ export const ContentProduct = styled(Link)`
     min-width: 251px;
     height: 400px;
     cursor: pointer;
+    text-decoration: none;
 }
 `

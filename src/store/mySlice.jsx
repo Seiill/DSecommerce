@@ -5,23 +5,37 @@ export const cartSlice = createSlice({
   initialState: { items: [] },
   reducers: {
     addToCart: (state, action) => {
-      state.items.push(action.payload);
+
+      const itemIndex = state.items.findIndex(item => item.id === action.payload.id);
+      if (itemIndex !== -1) {
+        state.items[itemIndex].quantity += 1;
+      } else {
+        state.items.push({...action.payload, quantity: action.payload.quantity || 1});
+      }
     },
     removeFromCart: (state, action) => {
-      const productId = action.payload;
-      state.items = state.items.filter(item => item.id !== productId);
-    },
-    increaseQuantity: (state, action) => {
-        const { id } = action.payload;
-        const item = state.items.find((item) => item.id === id);
-        if (item) {
-          item.quantity += 1;
+        const productId = action.payload;
+        const itemIndex = state.items.findIndex(item => item.id === productId);
+        if (itemIndex !== -1) {
+          if (state.items[itemIndex].quantity > 1) {
+            state.items[itemIndex].quantity -= 1;
+          } else {
+            state.items.splice(itemIndex, 1);
+          }
         }
-      },
-         
-    clearCart: (state) => {
-      state.items = [];
+      
+      /* const productId = action.payload;
+      state.items = state.items.filter(item => item.id !== productId); */
     },
+         
+    clearCart: (state, action) => {
+      const productId = action.payload;
+      const itemIndex = state.items.findIndex(item => item.id === productId);
+      if (itemIndex !== -1) {
+        state.items.splice(itemIndex, 1);
+      }
+    },
+    
     /* checkout: () => {
       const navigate = useNavigate();
 

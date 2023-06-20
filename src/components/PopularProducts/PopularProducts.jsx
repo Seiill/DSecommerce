@@ -9,7 +9,7 @@ const PopularProducts = () => {
     <Container>
         <Title>Más Populares</Title>
         {listProduct.map((item)=>(
-            <ContentImage key={item.id}>
+            <ContentImage to={`/producto/${item.id}`} key={item.id}>
             <Image src={item.img}/>
             <TextContent>
                 <Name>{item.name}</Name>

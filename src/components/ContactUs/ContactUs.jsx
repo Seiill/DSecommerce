@@ -5,7 +5,8 @@ const ContactUs = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        message: ''
+        message: '',
+        tel: ''
       });
     
       const handleChange = (e) => {
@@ -22,12 +23,15 @@ const ContactUs = () => {
         })
           .then(response => response.json())
           .then(data => {
-            console.log(data); // Respuesta del servidor
-            // Realizar acciones adicionales según la respuesta del servidor
+            console.log(data);
+            if(data.status==='success'){
+                window.location.href='/'
+            }else{
+                alert('Error al enviar')
+            }
           })
           .catch(error => {
             console.error(error);
-            // Manejar el error
           });
       };
 
@@ -38,6 +42,11 @@ const ContactUs = () => {
           <Label htmlFor="name">Nombre:</Label>
           <Input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
         </FormGroup>
+        <FormGroup>
+          <Label htmlFor="name">Teléfono:</Label>
+          <Input type="tel" id="tel" name="tel" value={formData.tel} onChange={handleChange} />
+        </FormGroup>
+        
         <FormGroup>
           <Label htmlFor="email">Email:</Label>
           <Input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />

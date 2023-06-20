@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { removeFromCart, increaseQuantity } from '../../store/mySlice';
+import { removeFromCart, addToCart, clearCart } from '../../store/mySlice';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -9,19 +9,23 @@ import { listProduct } from '../../util/data';
 import { useParams } from 'react-router-dom';
 const Cart = () => {
   const {id} = useParams();
-    const cartItems = useSelector((state) => state.cart.items);
-    const dispatch = useDispatch();
+    const {items: cartItems} = useSelector((state) => state.cart);
+    const dispatch = useDispatch(); 
 
     const handleRemoveFromCart = (id) => {
         dispatch(removeFromCart(id));
   };
-  const handleIncreaseQuantity = (id) => {
-    dispatch(increaseQuantity(id));
+  const handleIncreaseQuantity = (item) => {
+    dispatch(addToCart(item));
   };
+const handleRemoveProduct = (id) =>{
+  dispatch(clearCart(id))
+}
+
   return (
     <Container>
         
-        <ProductContainer>
+        <ProductContainer> 
             <TitlesContainer>
                  <ProductType>Producto</ProductType>
             <Quantity>Cantidad</Quantity> 
@@ -42,14 +46,14 @@ const Cart = () => {
                     <ProductPrice>${item.price}</ProductPrice>
                 </TextContent>
             </Product>
-            <ProductAmountContainer onClick={(e)=>(console.log(e.target.value))} >
-                <AddIcon onClick={() => handleIncreaseQuantity({ id: item.id })}/>
-                <ProductAmount onClick={(e) => console.log(e.target.value)}>{isNaN(item.quantity) ? 0 : item.quantity}</ProductAmount>
-                <RemoveIcon />
+            <ProductAmountContainer  >
+                <AddIcon onClick={() => handleIncreaseQuantity(item)}/>
+                <ProductAmount >{item.quantity}</ProductAmount>
+                <RemoveIcon onClick={() => handleRemoveFromCart(item.id)}/>
             </ProductAmountContainer>
             <PriceDetail>
             <ProductPriceTwo>${item.quantity * product.price}</ProductPriceTwo>
-            <DeleteIcon  onClick={() => handleRemoveFromCart(item.id)} />
+            <DeleteIcon  onClick={() => handleRemoveProduct(item.id)} />
             </PriceDetail>
             </Wrapper>
             );

@@ -1,4 +1,5 @@
 import { styled } from "styled-components"
+import {Link} from 'react-router-dom'
 
 export const Container= styled.aside`
 width: 20%;
@@ -11,11 +12,13 @@ text-align: center;
     padding: 20px 0;
     color: #2C2A4A;
 `
-export const ContentImage = styled.figure`
+export const ContentImage = styled(Link)`
     width: 150px;
     height: 150px;
     padding-bottom: 30px;
     display: flex;
+    cursor: pointer;
+    text-decoration: none;
     `
 export const Image =styled.img`
     width: 100%;
