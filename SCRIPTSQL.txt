@@ -1,0 +1,12 @@
+CREATE  DATABASE DulceSorpresa;
+
+USE Dulcesorpresa;
+CREATE TABLE contacto(
+nombre VARCHAR(75),
+    email VARCHAR(65),
+    telefono VARCHAR(15),
+    mensaje TEXT
+    
+);
+
+INSERT INTO contacto (nombre, email, telefono, mensaje ) VALUES ('CARL ANTONIO VILLEGAS', 'carl@contact.com', '3012345678','mensaje de prueba XD'); 
